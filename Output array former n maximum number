@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+function compareNumbers(a,b){
+	return a-b;
+}
+var numberArray=[13,2,31,4,5];
+function newArray(){
+	numberArray.sort(compareNumbers);
+	numberArray.reverse();
+document.write(numberArray);
+}
+var lastArray=new Array(numberArray.map(newArray));
+document.write(lastArray.slice(0,3));
+
+</script>
+</body>
+</html>
