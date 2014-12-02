@@ -1,0 +1,16 @@
+<html>
+<script>
+ function Sum(){
+  var a=parseInt(document.getElementById("num1").value);
+  var b=parseInt(document.getElementById("num2").value);
+  document.getElementById("num3").value=(a+b);
+  }
+ </script>
+</head>
+ 
+<body>
+<input type="text" id="num1"/>+<input type="text" id="num2"/>
+<input type="button" id="btn" onclick="Sum()" value="equal"/>
+<input type="text" id="num3"/>
+</body>
+ </html>           
