@@ -7,33 +7,28 @@
 <body>
 	<div class="container">
 		<hr/>
-		<div id="console" class="well text-right">
-			
+		<div class="row">
+			<div class="col-md-10">
+				<input class="form-control form-lg" />
+			</div>
+			<div class="col-md-2">
+				<button onclick="calculate();" class="btn btn-primary btn-block">=</button>
+			</div>
 		</div>
-		<div>
-			<button class="btn btn-lg btn-primary">+</button>
+		<br/>
+		<div class="row">
+			<div id="console" class="col-md-12 well text-right">
+			</div>
 		</div>
-		<button class="btn btn-lg">1</button>
-		<button class="btn btn-lg">2</button>
 	</div>
 
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		$('button').click(function(event){
-			var btnContent = $(event.target).html();
-			if(btnContent === '+')
-			{
-				//operator
-			}
-
-			if(btnContent.match(/\d/)){
-				//digit
-				var consoleContent = $('#console').html();
-				//append to existing digit
-				consoleContent += btnContent;
-				$('#console').html(consoleContent);
-			}
-		});
+		function calculate(){
+			var exp = $('input').val();
+			var result = eval(exp);
+			$('#console').html(result);
+		}
 	</script>
 </body>
 </html>
