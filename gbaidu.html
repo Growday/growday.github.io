@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+<title>百度一下，你就知道 </title>
+<link href="C:\Users\Administrator\Desktop\gweb\gstyle.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript"> 
+$(document).ready(function(){
+  $(".navigator").click(function(){
+    $(".panel").slideDown("slow");
+  });
+});
+</script>
+</head>
+<body>
+<img id="baidu" src="C:\Users\Administrator\Desktop\gweb\photo.png">
+
+<div id="searchnews">
+<a href="http://news.baidu.com/">新闻</a>&nbsp
+<a href="http://www.baidu.com/">网页</a>&nbsp
+<a href="http://tieba.baidu.com/">贴吧</a>&nbsp
+<a href="http://zhidao.baidu.com/">知道</a>&nbsp
+<a href="http://music.baidu.com/">音乐</a>&nbsp
+<a href="http://image.baidu.com/">图片</a>&nbsp
+<a href="http://v.baidu.com/">视频</a>&nbsp
+<a href="http://map.baidu.com/">地图</a>&nbsp
+<a href="http://baike.baidu.com/">百科</a>&nbsp
+<a href="http://wenku.baidu.com/">文库</a>&nbsp
+<a href="http://www.baidu.com/more/">更多>></a>&nbsp
+</div>
+
+<div id="inputbar">
+<input id="searchbox" type="text" >
+<button id="search" type="button" style="cursor:pointer">百度一下
+</button>
+</div>
+
+<ul>
+<li class="navigator">导航</li>
+<li>新闻</li>
+<li>音乐</li>
+<li>视频</li>
+</ul>
+
+<div class="panel">
+<p>您还未收藏任何网址，现在就添加一些吧~</p>
+</div>
+
+</body>
+</html>
