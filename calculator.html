@@ -1,34 +1,109 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Calculator</title>
-	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-	<div class="container">
-		<hr/>
-		<div class="row">
-			<div class="col-md-10">
-				<input class="form-control form-lg" />
-			</div>
-			<div class="col-md-2">
-				<button onclick="calculate();" class="btn btn-primary btn-block">=</button>
-			</div>
-		</div>
-		<br/>
-		<div class="row">
-			<div id="console" class="col-md-12 well text-right">
-			</div>
-		</div>
-	</div>
 
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-	<script type="text/javascript">
-		function calculate(){
-			var exp = $('input').val();
-			var result = eval(exp);
-			$('#console').html(result);
-		}
-	</script>
+<head>
+    <title>Calculator</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+    	.plus-btn h1{
+    		line-height: 3.8;
+    	}
+    	
+    </style>
+</head>
+
+<body ng-app="App" ng-controller="AppCtrl">
+    <div class="container">
+        <hr/>
+        <input class="form-control input-lg input-block text-right h1" ng-model="output" />
+        <hr/>
+        <div class="row">
+            <div class="col-xs-3">
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(1)">
+                    <h1>1</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(4)">
+                    <h1>4</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(7)">
+                    <h1>7</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(0)">
+                    <h1>0</h1>
+                </button>
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(2)">
+                    <h1>2</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(5)">
+                    <h1>5</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(8)">
+                    <h1>8</h1>
+                </button>
+                <button class="btn btn-lg btn-primary btn-block" ng-click="operator('*')">
+                    <h1>*</h1>
+                </button>
+
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(3)">
+                    <h1>3</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(6)">
+                    <h1>6</h1>
+                </button>
+                <button class="btn btn-lg btn-default btn-block" ng-click="num(9)">
+                    <h1>9</h1>
+                </button>
+                <button class="btn btn-lg btn-primary btn-block" ng-click="operator('/')">
+                    <h1>/</h1>
+                </button>
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-lg btn-primary btn-block plus-btn" ng-click="operator('+')">
+                    <h1>+</h1>
+                </button>
+                <button class="btn btn-lg btn-info btn-block" ng-click="operator('-')">
+                    <h1>-</h1>
+                </button>
+                <button class="btn btn-lg btn-success btn-block" ng-click="cal()">
+                    <h1>=</h1>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.2.16/angular.min.js"></script>
+    <script type="text/javascript">
+    angular.module('App', [])
+        .controller('AppCtrl', function($scope) {
+            $scope.output = '0';
+            var init = true;
+
+            $scope.num = function(num) {
+                $scope.output = init ? num : $scope.output + num.toString();
+                init = false;
+            };
+
+            $scope.operator = function(op) {
+                $scope.output = init ? op : $scope.output + op.toString();
+                init = false;
+            };
+
+            $scope.cal = function() {
+                try {
+                    var res = eval($scope.output);
+                    $scope.output += '=' + res;
+                } catch (ex) {
+                    $scope.output = 'Error!';
+                }
+                init = true;
+            };
+        });
+    </script>
 </body>
+
 </html>
