@@ -1,0 +1,129 @@
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Bootstrap 实例 - 基本的表格</title>
+   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <link href="common.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </head>
+<body>
+<div class="container">
+   <div class="jumbotron">
+      <h1>德度系统</h1>
+      <p>这是一个最方便快捷的系统。</p>
+     
+   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum 
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum 
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum 
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div class="col-md-10">
+
+<button type="button" class="btn btn-default navbar-btn">增加</button>
+<button type="button" class="btn btn-default navbar-btn">删除</button>
+<button type="button" class="btn btn-default navbar-btn">更改</button>
+ <table class="table table-condensed">
+   <caption>精简表格布局</caption>
+   <thead>
+      <tr>
+         <th>名称</th>
+         <th>城市</th>
+         <th>密码</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+         <td>560001</td>
+      </tr>
+      <tr>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+         <td>400003</td>
+      </tr>
+      <tr>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+      </tr>
+      <tr>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+      </tr>
+      <tr>
+         <td>Uma</td>
+         <td>Pune</td>
+         <td>411027</td>
+      </tr>
+   </tbody>
+</table>
+</div>
+</div>
+<div class="pull-right">
+<ul class="pagination">
+  <li><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1</a></li>
+  <li class="disabled"><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+
+
+<div class="footer">
+    <img src="image/dedu.png" width="100" height="100" alt="清凉夏日，那些电影中的最难忘比基尼瞬间" title="清凉夏日，那些电影中的最难忘比基尼瞬间">
+	<p>德度小系统</p>
+</div>	
+</body>
+</html>
